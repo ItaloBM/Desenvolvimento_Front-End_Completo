@@ -1,0 +1,14 @@
+body{
+    font-size: 30px;
+}
+
+#especial{
+    font-size: 2em;
+    font-family: Yuji Hentaigana Akari;
+}
+
+.key{
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
