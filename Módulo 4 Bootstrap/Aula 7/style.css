@@ -1,0 +1,118 @@
+/* configuração da imagem de fundo */
+.bgimage {
+    height:100vh;
+    background: url('images/heroImage.jpg');
+    background-size:cover;
+    position:relative;
+}
+/* configuração do texto */
+.hero_title {
+    font-size: 4.5rem;
+}
+.hero_desc {
+    font-size: 2rem;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+/* A imagem ocupará 100% do espaço disponível */
+.imageAboutPage {
+    width: 100%;
+}
+
+/* cada card com 280px de altura e apontador como seta do mouse */
+.servicesText.card {
+    height: 280px;
+    cursor: pointer;
+  }
+
+/* ícones com tamanho 36px e alinhados ao centro */
+.servicesIcon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+
+/* título dos cards ao centro */
+.card-title {
+    text-align: center;
+}
+
+/* ao serem selecionados, os ícones cards mudam de cor */
+.card:hover .servicesIcon {
+    color: #93C0D7;
+}
+
+/* ao ser selecionado, o card terá borda colorida */
+.servicesText:hover {
+    border: 2px solid #93C0D7;
+}
+
+/* Navbar com a cor preta tendo opacidade menor (0.8) */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* adiciona a cor de fundo preta ao menu */
+.navbarScroll.navbarDark {
+    background-color: black;
+}
+
+/* Altera a cor dos textos do navbar para branco */
+/*.navbar-dark .navbar-nav .nav-link {
+/*    color: white !important;
+}
+
+/* Altera a cor dos textos do navbar quando estão em hover (quando o mouse passa por cima) */
+/*.navbar-dark .navbar-nav .nav-link:hover {
+/*    color: #93C0D7 !important; /* Você pode ajustar a cor de destaque que preferir */
+/*}
+
+/* tamanho dos ícones */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* cor quando selecionado */
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
+    color: grey;
+}
+
+/* cor padrão */
+.fab {
+    color: white;
+}
+/* cor padrão de fundo */
+#footer {
+    background-color: #001E38;
+    text-align: center;
+}
+
+/* espaçando as seções */
+#about, #services, #portfolio, #contact {
+    margin-top: 4rem;
+    padding-top: 4rem;
+}
+#contact {
+    padding-bottom: 4rem;
+}
+
+/* Botão personalizado com cor definida */
+.btn-custom {
+    background-color: #93C0D7 !important; 
+    border-color: #93C0D7 !important; /* Cor da borda */
+    color: white !important; /* Cor do texto */
+}
+
+/* Estilo ao passar o mouse sobre o botão */
+.btn-custom:hover {
+    background-color: #001E38 !important; /* Cor mais escura para o efeito de hover */
+    border-color: #001E38 !important; /* Cor da borda ao passar o mouse */
+    color: white !important; /* Cor do texto ao passar o mouse */
+}
