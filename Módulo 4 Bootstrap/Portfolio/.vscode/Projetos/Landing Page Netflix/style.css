@@ -1,0 +1,187 @@
+/* Todo o conteúdo recebe padding e margin 0 e */ 
+/* Padding = distância do conteúdo as bordas da div */ 
+/* Margin = distância das bordas até o canto da tela */ 
+/* box sizing fixa o tamanho da caixa tem considerar o padding */ 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Configuração do conteúdo em tela na tag <body> */ 
+body{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: black;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+/* Cria um "filho" da classe para estilização */ 
+.container::before{
+    content: "";
+    background: url(imagens/netflix-bg.jpg) no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Display: flex, transforma filhos de nav em flex itens*/
+/* Adiciona esses filhos a direita */
+.container .navbar{
+    height: 100px;
+    display: flex; 
+}
+
+/* Imagem ocupando 100% da altura e flutuando a esquerda do bloco como flex item*/
+.container .navbar .left{
+    height: 100%;
+    display: flex;
+    float: left;
+}
+
+/* Imagem com 100px, posição absoluta e a 35px da esquerda*/
+.container .navbar .left img{
+    height: 100px;
+    position: absolute;
+    left: 35px;
+}
+
+/* Menu direito com flex itens, 100px dd altura, flutuando à direita */
+/* Com posição absoluta e a 50px do canto direito */
+.container .navbar .right{
+    display: flex;
+    height: 100px;
+    float: right;
+    position: absolute;
+    right: 50px;
+}
+
+/* Menu de linguagens com margin automática, centralizado, 18px de fonte*/
+/* Padding sup/inf com 7px, dir/esq com 10px, fonte branca*/
+/* Cursor normal e a 15px da div "left" */
+.container .navbar .right .language{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding: 7px 10px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+/* Opções de linguagens com a cor de fundo cinza  */
+.container .navbar .right .language option{
+    background-color: grey;
+}
+
+/*  */
+.container .navbar .right button{
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 7px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+}
+
+/* Link do botão sem sublinhado e com a cor branca */
+.container .navbar .right button a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Título com padding sup/inf de 70px e dir/esq de 45px */
+.container .title{
+    padding: 70px 45px;
+}
+
+/* Conteúdo da div title com largura de 950px, margin auto */
+/* Padding sup/inf de 75px e dir/esq de 0px, texto alinhado ao centro */
+.container .title .content{
+    width: 950px;
+    margin: auto;
+    padding: 75px 0;
+    text-align: center;
+}
+
+/* Título h1 com 650px de largura, margin auto, fonte 3 vezes maior e ao centro */
+.container .title .content h1{
+    width: 650px;
+    margin: auto;
+    font-size: 3.1rem;
+    text-align: center;
+}
+
+/* Subtítulo h2 com 650px, margin auto, fonte 1.6 vezes maior e ao centro */
+.container .title .content h2{
+    width: 650px;
+    margin: auto;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* Texto h3 com fonte 1x, margin sup/inf de 18px e dir/esq de 0px e ao centro  */
+.container .title .content form h3{
+    font-size: 1rem;
+    margin: 18px 0;
+    text-align: center;
+}
+
+/* <div> com a barra de coleta de email com 1000px de largura */
+.container .title .content form .email{
+    width: 1000px;
+    margin: auto;
+}
+
+/* Barra de coleta de email com 450px de largura, 60px de altura e margin auto */
+/* Padding de 20px em todos os 4 cantos, fonte com 20px, sem contorno */
+.container .title .content form .email input{
+    height: 60px;
+    width: 450px;
+    margin: auto;
+    padding: 20px;
+    font-size: 20px;
+    outline: none;
+}
+
+/* Botão de envio do email com margin auto, 180x60 de tamanho, alinhado ao centro */
+/* Tamanho do texto 20px, padding sup/inf de 7px e dir/esq de 17px */
+/* Cor de fund vermelha, cursor normal, canto superior e inferior arredondados */
+/* Sem bordar e colocado mais 5px à esquerda */
+.container .title .content form .email button{
+    margin: auto;
+    height: 60px;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 7px 17px;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: none;
+    margin-left: -5px;
+}
+
+/* botão muda de cor ao ser selecionado */
+.container .title .content form .email button:hover{
+    background-color: #f40612;
+}
+
+/* Texto do link do botão sem sublinhado e com a cor branca */
+.container .title .content form .email button a{
+    text-decoration: none;
+    color: white;
+}
