@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js'></script>
+</head>
+<body>
+    <div id="app">
+        <div v-if="nota>=60">O aluno foi Aprovado.</div>    
+        <div v-else>O aluno foi reprovado.</div>   
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data:{
+                nota: 60
+            }
+        })        
+
+    </script> 
+    
+</body>
+</html>

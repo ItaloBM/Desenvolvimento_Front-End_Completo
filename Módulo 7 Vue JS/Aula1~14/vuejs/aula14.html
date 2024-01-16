@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11</title>
+    <!-- Link do bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Link do vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <task-list></task-list>        
+    </div>
+
+<script>
+    
+    let taskComponent = {
+        template:`<li><slot></slot></li>`
+    }
+
+    let taskListComponent = {
+        template: `<div>
+                    <h3>Lista de Tarefas</h3>   
+                    <ul><task v-for="task in tasks">{{task}}</task></ul>                
+            </div>`,
+        data(){
+            return{
+                tasks: ['Assistir Aulas', 'Alimentar-se bem', 'Realizar atividades físicas', 'Estar com amigos']
+            }
+        },
+        components: {
+            'task': taskComponent
+        }
+    }
+
+    let app = new Vue({
+        el: '#app',
+        components:{
+            'task-list': taskListComponent
+        }
+    })
+
+</script>
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

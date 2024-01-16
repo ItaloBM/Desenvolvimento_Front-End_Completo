@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11</title>
+    <!-- Link do bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Link do vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body class="py-5">
+    <div id="app" style="display:flex">
+        <property-card :title="property.title" :description="property.description" :image="property.image" v-for="property in properties"></property-card>   
+    </div>
+
+<script>
+    Vue.component('property-card', {
+        template: `<div class="card mx-2" style="width: 18rem;">
+            <img :src="image" class="card-img-top" alt="...">
+            <div class="card-body">
+                 <h5 class="card-title">{{title}}</h5>
+                 <p class="card-text">{{description}}</p>
+                 <a href="#" class="btn btn-primary">Comprar</a>
+           </div>
+        </div>`,
+
+        props: ['title', 'description', 'image']
+    })
+
+    var app = new Vue({
+        el: '#app',
+        data:{
+            properties:[
+                {'title': 'Tv Analogica', 'description': '3xR$99,90', 'image': 'televisao.png'},
+                {'title': 'Celular Smartphone', 'description': '8xR$78,90', 'image': 'smartphone.png'},
+                {'title': 'Headphone', 'description': '3xR$100', 'image': 'headphone.png'},
+                {'title': 'Gato', 'description': '10xR$100', 'image': 'a1.png'},
+            ]
+        }
+    })
+</script>
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Vue JS</title>
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js'></script>
+</head>
+<body>
+
+    <div id="divId">
+        <p>Nome do Player: {{player.nome}}</p>
+    </div>
+
+    <script>
+        var vue = new Vue({
+            el: '#divId',
+            data:{
+                text: "Hello World",
+                number: 2022,
+                player:{
+                    nome: "Mario",
+                    vidas: 3
+                }
+            }
+        })
+
+        vue.$watch('number', function(){
+            alert("O número mudou!")
+        })
+
+        vue.number = 2023
+    </script>    
+</body>
+</html>

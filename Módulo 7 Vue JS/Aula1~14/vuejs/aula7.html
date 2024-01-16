@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src='https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js'></script>
+</head>
+<body class="py-5">
+
+    <div class="container">
+        <div id="app" class="text-center">
+            <img :src="images[currentImage]" width="400" height="500"><br/><br/>
+            
+            <button @click="previousImage" class="btn btn-primary" :disabled="currentImage==0">Anterior</button>
+            <button @click="nextImage" class="btn btn-primary" :disabled="currentImage==(images.length-1)">Próximo</button>
+        </div>
+    </div>
+
+    <script>  
+        var app = new Vue ({
+            el: '#app',
+            data: {
+                images: ['a1.png','a2.png','a3.png','a4.png','a5.png','a6.png'],
+                currentImage: 0
+            },
+            methods: {
+                nextImage: function(e){
+                    if(this.currentImage !== (this.images.length-1))
+                        this.currentImage++;
+                },
+
+                previousImage: function(e){
+                    if(this.currentImage !== 0)
+                        this.currentImage--;
+                }
+            }
+        }) 
+                      
+    </script>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
