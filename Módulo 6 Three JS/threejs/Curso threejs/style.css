@@ -1,0 +1,16 @@
+{
+	margin: 0;
+	padding: 0;
+}
+
+.text{
+	position: fixed;
+	color: white;
+	font-size: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	left: 50%;
+	top:10px;
+	text-shadow: 0 20px 10px rgba(0,0,0,0.3);
+	transform: translateX(-50%);
+}
