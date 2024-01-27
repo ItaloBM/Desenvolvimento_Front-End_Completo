@@ -1,0 +1,36 @@
+criando projeto typescript
+
+comandos:
+
+1º criar pasta do projeto e abrir no VS CODE e iniciar projeto:
+
+npm init -y
+
+2º Instalando TYPESCRIPT GLOBAL OU so no PROJETO:
+
+npm install -D typescript  = No projeto
+npm install -g typescript  =  global
+
+3º Iniciando projeto TS:
+
+npx tsc --init
+
+4º criando pasta .vscode dentro da pasta do projeto com o arquivo abaixo: settings.json
+
+{
+    "code-runner.executorMap": {
+        "typescript": "npx sucrase-node",  
+    }
+}
+
+5º Instalando Sucrase:
+
+npm i -D sucrase
+
+6º Build Projeto:
+
+npx tsc
+
+7º Compilando e executando projeto:
+
+npx sucrase-node index.ts ou play
