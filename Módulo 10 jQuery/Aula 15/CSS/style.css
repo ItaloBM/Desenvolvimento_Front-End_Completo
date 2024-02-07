@@ -1,0 +1,49 @@
+body {
+
+    background-color: #EEE;
+
+}
+
+
+
+#container {
+
+    background-color: #FFF;
+
+    padding: 12px;
+
+    margin: 12px;
+
+    height: 100%;
+
+}
+
+.item {
+
+    width: 200px;
+
+    background-color: #DDD;
+
+    padding: 8px;
+
+}
+
+.item img {
+
+    width: 100%;
+
+}
+
+.item .name {
+
+    font-size: 24px;
+
+}
+
+.item .price {
+
+    margin-top: 8px;
+
+    margin-bottom: 8px;
+
+}
