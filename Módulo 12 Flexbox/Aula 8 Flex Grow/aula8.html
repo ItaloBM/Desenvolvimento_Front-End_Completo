@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aula 8</title>
+	<link rel="stylesheet" type="text/css" href="aula8.css">
+</head>
+<body>
+	<h4>flex-basis: auto (flex-grow: 1; procurará distribuir os itens para ocupar o espaço do contêiner);</h4>
+	<div class="container">
+	    <div class="grow_1 basis_auto">Item 1</div>
+	    <div class="grow_1 basis_auto">Item 2</div>
+	    <div class="grow_1 basis_auto">Item 3</div>
+	    <div class="grow_1 basis_auto">Item 4</div>
+	</div>
+	<h4>flex-basis: auto (Com flex-grow: 0; os itens não ocuparão o espaço do contêiner e a largura deles será equivalente ao tamanho do conteúdo)</h4>
+	<div class="container">
+	    <div class="grow_0 basis_auto">Item 1</div>
+	    <div class="grow_0 basis_auto">Item 2</div>
+	    <div class="grow_0 basis_auto">Item 3</div>
+	    <div class="grow_0 basis_auto">Item 4</div>
+	</div>
+	<h4>flex-basis: auto (Com flex-grow: 0 e largura definida pela propriedade width)</h4>
+	<div class="container">
+	    <div class="grow_0 basis_auto largura">Item 1</div>
+	    <div class="grow_0 basis_auto largura">Item 2</div>
+	    <div class="grow_0 basis_auto largura">Item 3</div>
+	    <div class="grow_0 basis_auto largura">Item 4</div>
+	</div>
+	<h4>flex-basis: 125px;</h4>
+	<div class="container">
+	    <div class="grow_1 basis_125">Item 1</div>
+	    <div class="grow_1 basis_125">Item 2</div>
+	    <div class="grow_1 basis_125">Item 3</div>
+	    <div class="grow_1 basis_125">Item 4</div>
+	</div>
+	<h4>flex-basis: 100px (A somatória da largura dos Flex Itens é igual a 400 pixels. Mas mesmo assim flex-grow: 1; fará que os itens ocupem o espaço de 500 pixels do contêiner);</h4> 
+	<div class="container">
+	    <div class="grow_1 basis_100">Item 1</div>
+	    <div class="grow_1 basis_100">Item 2</div>
+	    <div class="grow_1 basis_100">Item 3</div>
+	    <div class="grow_1 basis_100">Item 4</div>
+	</div>
+	<h4>flex-basis: 100px (Com flex-grow: 0; os itens não ocuparão o espaço do contêiner e a largura deles será equivalente ao tamanho do conteúdo)</h4>
+	<div class="container">
+	    <div class="grow_0 basis_100">Item 1</div>
+	    <div class="grow_0 basis_100">Item 2</div>
+	    <div class="grow_0 basis_100">Item 3</div>
+	    <div class="grow_0 basis_100">Item 4</div>
+	</div>
+</body>
+</html>
