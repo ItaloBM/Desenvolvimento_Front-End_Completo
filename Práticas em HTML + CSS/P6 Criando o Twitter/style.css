@@ -1,0 +1,311 @@
+/* Parte 2: Sidebar*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Ubuntu;
+  }
+
+  body {
+    --twitter-color: #50b7f5; /* variável para armazenar a cor da fonte do twitter */
+    --twitter-background: #e6ecf0; /* variável para armazenar a cor de fundo do twitter */
+  }
+  /* o corpo da pagína será flexíveis, ocupando 100% da altura, altura máxima em 1300px e
+  margiem esquerda e direita automaticas, padding de 0 nas cima/baixo e 10 dir/esq */
+  body {
+    display: flex;
+    height: 100vh;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+  }
+
+  /* a caixa sidebar terá uma borda à direita, largura mínima de 250px, flex de 0.2, margem
+superior de 20px, padding de 20px na direita e na esquerda*/
+/* A propriedade flex do CSS, define como um ítem será posicionado para no espaço disponível 
+dentro de seu container. */
+.sidebar {
+    border-right: 1px solid var(--twitter-background);
+    flex: 0.2;  
+    min-width: 250px;
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* o ícone do twitter terá a twitter padrão do twitter e tamanho 30px */
+.fa-twitter {
+    color: var(--twitter-color);
+    font-size: 30px;
+}
+
+/* o ícone do twitter terá 14px de distância em todas as suas bordas*/
+.sidebarOption .material-icons,
+.fa-twitter {
+  padding: 14px;
+}
+
+/* sidebar com itens flexíveis, alinhados ao centro e que transformam o ponteiro do
+mouse em um apontador */
+.sidebarOption {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* o textos das seções serão em negrito, 20px e com margem de 20px a direita*/
+.sidebarOption h2 {
+    font-weight: 800;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* quando selecionados, os textos mudam de cor junto com o fundo */
+.sidebarOption:hover {
+    background-color: var(--twitter-background);
+    border-radius: 30px;
+    color: var(--twitter-color);
+    transition: color 100ms ease-out;
+}
+
+/* quando estivermos em uma opção, ela ficará marcada como selecionada, repare a home */
+.sidebarOption.active {
+    color: var(--twitter-color);
+}
+
+/* configuração do botão, largura 100%, cor do twitter no fundo, sem borda colorida e com texto
+na cor branca, borda arredondada, altura de 50px e margem acima de 20px */
+.sidebar__tweet {
+    width: 100%;
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+/* Parte 3: feed header tweetbox */
+/* o feed ocupa 50% da tela, terá uma borda cinza, largura mínima que se adapte ao 
+conteúdo, e caso o conteúdo estou a horizontal, ele pula pra linha de baixo */
+.feed {
+    flex: 0.5;
+    border-right: 1px solid var(--twitter-background);
+    min-width: fit-content;
+    overflow-y: scroll;
+}
+
+/* A header tem posição fixa quando deslocamos a página, está exatamente no ínicio da
+página, cor de fundo branca, acima de todos os outros elementos, possui borda padrão
+e um padding de 15px cima/baixo e 20px dir/esq */
+.feed__header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    border: 1px solid var(--twitter-background);
+    padding: 15px 20px;
+}
+
+/* o texto com o escrito home tem 20px de tamanho e negrito */
+.feed__header h2 {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+/* barra de rolagem padrão */
+.feed::-webkit-scrollbar {
+    display: none;
+}
+  
+/* retira a barra de rolagem horizontal */
+.feed {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* imagem no tweetbox com borda arredondada a 50% do permitido e altura 40px */
+.tweetbox__input img {
+    border-radius: 50%;
+    height: 40px;
+}
+
+/* tweetbox com padding de 10px em todos os lados, borda inferior com cor padrão
+padding em relação à direita de 10px */
+.tweetBox {
+    padding-bottom: 10px;
+    border-bottom: 8px solid var(--twitter-background);
+    padding-right: 10px;
+}
+ 
+/* todos os itens dentro do formulários serão flexíveis, mas um embaixo do outro */
+.tweetBox form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* caixa com a imagem e a entrada de dados flexivel */
+.tweetbox__input {
+    display: flex;
+    padding: 20px;
+}
+
+/* caixa de texto ocupa 100% da espaço disponível, margem esquerda de 20px,
+tamanho de fonte de 20px, sem bordas ou sublinhados */
+.tweetbox__input input {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+/* botão de tweetar com fundo padrão, sem borda colorida e com texto branco, negrito,
+borda arredondada em 30px, largura de 80px e altura de 40px, margem superior de 20px
+e margem esquerda automatica */
+.tweetBox__tweetButton {
+    background-color: var(--twitter-color);
+    border: none;
+    color: white;
+    font-weight: 900;  
+    border-radius: 30px;
+    width: 80px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+/* Parte 4: Posts */
+/* o avatar do post será arredondado e com altura de 40px */
+.post__avatar img {
+    border-radius: 50%;
+    height: 40px;
+}
+
+/* o post será flexível e os itens serão alinhados a partir do início, bordem inferior
+com a cor padrão de fundo e padding inferior de 10px */
+.post {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--twitter-background);
+    padding-bottom: 10px;
+}
+
+/* imagem no post com largura de 450px e precisa caber no post ou ser encurtada
+terá bordas arredondadas */
+.post__body img {
+    width: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+/* icones flexiveis e espaçados igualmente entre si, margem superior de 10px */
+.post__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* icone de verificado com tamanho 14px e com padrao a 5px da direita */
+.post__badge {
+    font-size: 14px !important; /* apenas esse trecho contém 14px, substitui imediatamente */
+    color: var(--twitter-color);
+    margin-right: 5px;
+}
+
+/* textos com negrito, tamanho 12px e cor cinza */
+.post__headerSpecial {
+    font-weight: 600;
+    font-size: 12px;
+    color: gray;
+}
+
+/* nome do perfil com fonte tamanho 15px e margem inferior de 5px */
+.post__headerText h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+/* conteudo do tweet com margem inferior de 10px e tamanho de fonte de 15px */
+.post__headerDescription {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* o post__body ocupa o maior pedaço que ele puder */
+.post__body {
+    flex: 1;
+    padding: 10px;
+}
+
+/* a foto do perfil fica distante 20px em todos os lados */
+.post__avatar {
+    padding: 20px;
+}
+
+/* Parte 5: widgets input */
+
+/* a parte de widgets ocupa 1/3 da página */
+.widgets {
+    flex: 0.3;
+}
+
+/* conteúdo de widgets input será flexível, com seus itens alinhados ao centro,
+cor de fundo padrão, padding de 10px em todos os lados, borda arredondada,
+margem superior de 10px e margem inferior de 20px */
+.widgets__input {
+    display: flex;
+    align-items: center;
+    background-color: var(--twitter-background);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* entrada de dados em borda colorida e com cor de fundo padrão*/
+.widgets__input input {
+    border: none;
+    background-color: var(--twitter-background);
+}
+
+/* o icone de pesquisa terá a cor cinza */
+.widgets__searchIcon {
+    color: gray;
+}
+
+/* Parte 6: Widgets trending */
+/* o widget tem margem superior de 15px, margem esquerda de 20px e padding de 20px em
+todas as direções, cor de fundo cinza e borda arredondada */
+.widgets__widgetTrending {
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #f5f8fa;
+    border-radius: 20px;
+}
+
+/* o texto com o título do widget tem tamanho de fonte 18px e negrito */
+.widgets__widgetTrending h2 {
+    font-size: 18px;
+    font-weight: 800;
+}
+  
+/* os textos com os assuntos mais comentados terão espaçamente de 10px em cima
+e embaixo, tamanho de fonte de 18px, cor padrão do twitter e borda inferior de 1px
+o cursor do mouse será um apontador */
+.trending{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: var(--twitter-color);
+    border-bottom: 1px ridge #D5DDE9;
+    cursor: pointer;
+}
+  
+/* ao passar o mouse, o texto fica mais claro*/
+.trending:hover{
+    color: #a7dbfa;
+}

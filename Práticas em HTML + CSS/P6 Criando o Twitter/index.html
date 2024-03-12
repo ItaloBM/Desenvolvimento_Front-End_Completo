@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+  <head>
+    <!-- caracteres padrão -->
+    <meta charset="UTF-8" />
+    <!-- responsividade padrão -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- título do site -->
+    <title>Twitter Clone</title>
+    <!-- conexão da folha de estilos -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- conexão da biblioteca de ícones padrão -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <!-- biblioteca específica para obter ícones do twitter -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+
+  </head>
+
+  <body>
+    <div class="sidebar">
+        <i class="fab fa-twitter"></i>
+
+        <div class="sidebarOption active ">
+            <span class="material-icons">home</span>
+            <h2>Home</h2>
+        </div>
+
+        <div class="sidebarOption">
+            <span class="material-icons">search</span>
+            <h2>Explorar</h2>
+        </div>
+
+        <div class="sidebarOption">
+            <span class="material-icons">notifications_none</span>
+            <h2>Notificações</h2>
+        </div>
+
+        <div class="sidebarOption">
+            <span class="material-icons">mail_outline</span>
+            <h2>Mensagens</h2>
+        </div>
+
+        <div class="sidebarOption">
+            <span class="material-icons">bookmark_border</span>
+            <h2>Bookmarks</h2>
+        </div>
+
+        <div class="sidebarOption">
+            <span class="material-icons">list_alt</span>
+            <h2>Listas</h2>
+        </div>
+
+        <div class="sidebarOption">
+            <span class="material-icons">perm_identity</span>
+            <h2>Perfil</h2>
+        </div>
+
+        <div class="sidebarOption">
+            <span class="material-icons">more_horiz</span>
+            <h2>Mais</h2>
+        </div>
+
+        <button class="sidebar__tweet">Tweet</button>
+    </div>
+
+    <div class="feed">
+        <div class="feed__header">
+            <h2>Home</h2>
+        </div>
+
+        <div class="tweetBox">
+            <form>
+                <div class="tweetbox__input">
+                    <img src="imagens/profile.png" alt="">
+                    <input type="text" placeholder="O que está acontecendo"/>
+                </div>
+                <button class="tweetBox__tweetButton">Tweet</button>
+            </form>
+        </div>
+
+        <div class="post">
+            <div class="post__avatar">
+                <img src="imagens/profile.png" alt="">
+            </div>
+            <div class="post__body">
+                <div class="post__header">
+                    <div class="post__headerText">
+                        <h3>Mr Robot<span class="post__headerSpecial"><span class="material-icons post__badge">verified</span>@mrrobot</span></h3>
+                    </div>
+
+                    <div class="post__headerDescription">
+                        <p>"O controle é uma ilusão, mas o caos... o caos é real."</p>
+                    </div>
+                </div>
+
+                <img src="imagens/anonimo.webp">
+
+                <div class="post__footer">
+                    <span class="material-icons">comment</span>
+                    <span class="material-icons">repeatt</span>
+                    <span class="material-icons">favorite_border</span>
+                    <span class="material-icons">publish</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="post">
+            <div class="post__avatar">
+                <img src="imagens/logomarcaperfil.png" alt="">
+            </div>
+            <div class="post__body">
+                <div class="post__header">
+                    <div class="post__headerText">
+                        <h3>Mr Robot<span class="post__headerSpecial"><span class="material-icons post__badge">verified</span>@mrrobot</span></h3>
+                    </div>
+
+                    <div class="post__headerDescription">
+                        <p>"Nossa democracia foi hackeada. Hora de reiniciar e reescrever o código."</p>
+                    </div>
+                </div>
+
+                <div class="post__footer">
+                    <span class="material-icons">comment</span>
+                    <span class="material-icons">repeatt</span>
+                    <span class="material-icons">favorite_border</span>
+                    <span class="material-icons">publish</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="widgets">
+
+        <div class="widgets__input">
+            <span class="material-icons widgets__searchIcon">search</span>
+        <input type="text" placeholder="Buscar no Twitter">
+        </div>
+
+        <div class="widgets__widgetTrending">
+            <h2>Assuntos do Momento</h2>
+            <div class="trending">#CibersegurançaEHacking</div>
+            <div class="trending">#TecnologiaEseuImpactoNaSociedade</div>
+            <div class="trending">#ProblemasDeVigilânciaEPrivacidade</div>
+            <div class="trending">#SaúdeMentalETranstornoDissociativoDeIdentidade</div>
+            <div class="trending">#EngenhariaSocialEManipulação</div>
+            <div class="trending">#PoderCorporativoECorrupção</div>
+            <div class="trending">#RevoluçãoEResistência</div>
+            <div class="trending">#RealidadesAlternativasEPercepçãoDaRealidade</div>
+            <div class="trending">#AnarquiaEDescentralização</div>
+            <div class="trending">#HacktivismoEDenúncia</div>
+        </div>
+
+    </div>
+
+  </body>
+</html>
