@@ -1,0 +1,193 @@
+/* Parte 2: Nav */
+/* Reseta as margens e declara arial como fonte padrão */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial,sans-serif;
+}
+
+/* O corpo pode ocupar 100% da largura da página*/
+body{
+    width: 100%;
+}
+/* A navbar ocupa 100% da largura e 60px de altura
+a distância do seu conteúdo as bordas da div é de 5px, cor branca
+Seus elementos ficam à direita de forma relativa uns dos outros*/
+.navbar{
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    float: right;
+    position: relative;
+}
+
+/* Os elementos da lista ordenada são flexíveis e ficam uns à direita dos outros*/
+.navbar ul{
+    display: flex;
+    position: absolute;
+    right: 100px;
+    line-height: 30px;
+}
+
+/* Cada item da lista não ordenada fica sem o tópico, margin auto (vertical) e 0 na horizontal
+margem direita de 12px*/
+.navbar ul li{
+    list-style: none;
+    margin: auto 0;
+    margin-right: 12px;
+}
+
+/* Os links ficam sem sublinhado, com a cor preta e com tamanho de fonte de 12px */
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+/* A propriedade hover define o que será feito quando passarmos o mouse no elemento,
+nesse caso ele terá um sublinhado*/
+.navbar ul li a:hover{
+    text-decoration: underline;
+}
+
+/* As imagens se tornam flexíveis (uma a direita da outra), com altura 30px, 
+sempre à direita, com posição absoluta e a 10px uma da outra*/
+
+/* absolute: Essa propriedade position CSS é usada para que o elemento da página parta 
+do ponto superior esquerdo a outros elementos. 
+Ou seja, ela determina o elemento “pai” e os elementos “parentes”.*/
+.navbar .imagens{
+    display: flex;
+    height: 30px;
+    float: right;
+    position: absolute;
+    right: 10px;
+}
+
+/* As imagens foram colocadas dentro de tags <a>, essas tags ficam separadas em 15px
+as imagens ao centro e de forma flexível */
+.navbar .imagens a{
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* Cada tag img dentro da tag <a> será renderizado como bloco, tendo altura de 30px
+margin auto (vertical) e 0 (horizontal) e linha de altura de 60px*/
+.navbar .imagens a img{
+    display: block;
+    height: 30px;
+    margin: auto 0;
+    line-height: 60px;
+}
+
+/* Referência a primeira imagem, para ajustar sua altura em 15px e sua opacidade */
+.navbar .imagens a:nth-child(1) img{
+    height: 15px;
+    opacity: 0.6;
+}
+
+/* Parte 3: Google */
+/* A div se distancia a 5px da nav e também ocupa 100% da largura da página*/
+.google{
+    margin-top: 5px;
+    width: 100%;
+}
+
+/* A imagem terá altura de 92px, linha de 91px, sendo tratada como bloco e
+margem de 0px (vertical) e auto (horizontal) */
+.google img{
+    height: 92px;
+    line-height: 91px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Parte 4: Search input */
+/* A div pais que contem as demais, terá lagura de 550px e altura de 45px
+será renderizada como bloco, margin 0 (vertical) e auto (horizontal)
+terá uma distância em relação a div anterior de 25px na parte de cima */
+.search{
+    width: 550px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+/* A div com a barra de pesquisa terá altura de 45px e posição absoluta */
+.search .input{
+    height: 45px;
+    position: relative;
+}
+
+.search .input input{
+    width: 100%; /* a barra de pesquisa ocupada 100% da largura da div*/
+    display: block; /* é renderizada como bloco*/
+    margin: 0 auto; /* margem de 0 na vertical e auto na horizontal*/
+    height: 45px; /* altura de 45px */
+    border-radius: 24px; /* bordas arredondadas em 24px */
+    outline: none; /* sem contorno*/
+    border: 1px solid #dfe1e5; /* configura a borda */
+    padding: 0 45px; /* padding de 0 na vertical e 45 na horizontal */
+    font-size: 15px; /* tamanho de fonte de 15 px*/
+}
+
+/* Ao passar o mouse, a barra de pesquisa adquire uma sombra */
+.search .input input:hover{
+    box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* O ícone de pesquisa */
+.search .input .fa-search{
+    font-size: 15px; /* tamanho de 15px */
+    position: absolute;
+    left: 17px; /* 17px da esquerda */
+    top: 16px; /* 16px do topo */
+    color: rgba(0, 0, 0, 0.3); /* cor */
+    cursor: pointer; /* cursor vira uma mão apontadora */
+}
+
+/* O ícone do microfone */
+.search .input .fa-microphone{
+    font-size: 15px; /* tamanho de 15px */
+    position: absolute;
+    right: 17px; /* 17 px da direita */
+    top: 16px; /* 16px do topo */
+    color: rgba(0, 0, 0, 0.5); /* cor */
+    cursor: pointer; /* cursor vira uma mão apontadora */
+}
+
+/* Parte 5 Search buttons */
+/* A div que contém os botões será renderizada como bloco, seus botões serão
+alinhados ao centro e terá distância de 20px da div anterior */
+.buttons{
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Cada botão */
+.buttons button{
+    min-width: 54px; /* largura mínima de 54px */
+    height: 35px; /* altura de 35px */
+    padding: 0 16px; /* padding de 0 na vertical e 16px na horizontal */
+    margin: 11px 4px; /* margem de 11px na vertical e 4px na horizontal */
+    border: none; /* sem bordas */
+    background: #f8f9fa; /* cor de fundo */
+}
+
+/* Se passarmos o mouse em um botão, ele adquire uma borda arredondada e uma sombra */
+.buttons button:hover{
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, /10%);
+}
+
+/* O texto dos botões não possui sublinhado e será da cor preta.*/
+.buttons button a{
+    text-decoration: none;
+    color: black;
+}
